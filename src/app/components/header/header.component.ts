@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -14,13 +14,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-header',
   standalone: true,
   imports: [
-    RouterOutlet,
+    CommonModule,
     MatSidenavModule,
     MatGridListModule,
     MatMenuModule,
@@ -33,13 +32,9 @@ import { HeaderComponent } from "./components/header/header.component";
     MatTableModule,
     MatBadgeModule,
     MatSnackBarModule,
-    HeaderComponent
-],
-  template: `
-  <app-header></app-header>
-  `,
-  styles: [],
+  ],
+  templateUrl: './header.component.html',
 })
-export class AppComponent {
-  title = 'store';
+export class HeaderComponent {
+
 }
