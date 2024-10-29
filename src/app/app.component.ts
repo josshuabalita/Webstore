@@ -1,42 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTreeModule } from '@angular/material/tree';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MaterialModule } from './material.module';
+
+import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from "./components/header/header.component";
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    MatSidenavModule,
-    MatGridListModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatListModule,
-    MatToolbarModule,
-    MatTableModule,
-    MatBadgeModule,
-    MatSnackBarModule,
-    HeaderComponent
+    MaterialModule,
+    HeaderComponent,
+    HomeComponent,
+    FiltersComponent,
 ],
   template: `
   <app-header></app-header>
+  <router-outlet></router-outlet>
   `,
   styles: [],
 })
