@@ -6,6 +6,7 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from "./components/header/header.component";
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
     HeaderComponent,
     HomeComponent,
     FiltersComponent,
+    CartComponent
 ],
   template: `
   <app-header></app-header>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from '../../material.module';
@@ -8,7 +9,8 @@ import { MaterialModule } from '../../material.module';
   standalone: true,
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterLink
   ],
   templateUrl: './header.component.html',
 })
